@@ -13,14 +13,10 @@ public class Excelfetch_snap extends ExcelRead
   {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\subbian\\eclipse-workspace\\Arch\\ExcelFetch\\driver\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		driver.get("https://www.flipkart.com/");
-		WebElement btn=driver.findElement(By.xpath("//button[@class='_2AkmmA _29YdH8']"));
-		btn.click();
-		WebElement login=driver.findElement(By.xpath("//a[text()='Login & Signup']"));
-		login.click();
-		WebElement user=driver.findElement(By.xpath("//input[@class='_2zrpKA _1dBPDZ']"));
-		user.sendKeys(getData(4,1));
-		WebElement pwd=driver.findElement(By.xpath("//input[@class='_2zrpKA _3v41xv _1dBPDZ']"));
-		pwd.sendKeys(getData(4,2));	
+		driver.get("https://www.snapdeal.com/");
+		WebElement btn=driver.findElement(By.xpath("//input[@placeholder='Search products & brands']"));
+		btn.sendKeys(getData(1,1));
+		WebElement pwd=driver.findElement(By.xpath("//span[text()='Search']"));
+		pwd.click();	
   }
 }

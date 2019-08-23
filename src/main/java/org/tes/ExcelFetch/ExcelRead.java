@@ -20,7 +20,7 @@ public class ExcelRead
 	File f= new File("C:\\Users\\subbian\\eclipse-workspace\\Arch\\ExcelFetch\\Excel\\excel pwd.xlsx");
 	FileInputStream stream = new FileInputStream(f);
 	Workbook book=new XSSFWorkbook(stream);
-	Sheet s=book.getSheet("details");
+	Sheet s=book.getSheet("Sheet1");
 	Row r=s.getRow(rowno);
 	Cell c=r.getCell(columno);
 	int type =c.getCellType();
